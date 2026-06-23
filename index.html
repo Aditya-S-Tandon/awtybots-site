@@ -1,0 +1,359 @@
+<!--
+  awtybots.org — Team 5829 (AwtyBots) | Awty International School, Houston TX
+  Redesigned homepage. Vanilla HTML/CSS/JS, GitHub Pages friendly.
+  Design system: assets/css/site.css · interactions: assets/js/site.js
+  © 2015–2026 The AwtyBots Team, AIS. CC BY 4.0.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AwtyBots · FRC Team 5829 · Awty International School</title>
+  <meta name="description" content="The AwtyBots — FIRST Robotics Competition Team 5829 at the Awty International School in Houston, Texas. 40 students designing, building, and programming a new robot every season since 2016.">
+  <meta name="theme-color" content="#0a0e0c">
+  <link rel="icon" type="image/x-icon" href="assets/images/icon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AwtyBots · FRC Team 5829">
+  <meta property="og:description" content="FIRST Robotics Competition Team 5829 — Awty International School, Houston TX.">
+  <meta property="og:image" content="assets/images/web/robot-field.jpg">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="assets/css/site.css" rel="stylesheet">
+
+  <style>
+    /* page-specific: build-season photo marquee */
+    .photos .marquee__row img { height: 128px; border-radius: 10px; opacity: 1; border: 1px solid var(--line); }
+    @media (max-width:600px){ .photos .marquee__row img { height: 96px; } }
+  </style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="index.html" aria-label="AwtyBots home">
+      <img src="assets/images/logo.png" alt="">
+      <span><b>AWTY<span>BOTS</span></b><small>FRC 5829</small></span>
+    </a>
+    <nav class="nav__links" id="navlinks" aria-label="Primary">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="robots.html">Robots</a>
+      <a href="recaps.html">Recaps</a>
+      <a href="events.html">Events</a>
+      <a href="outreach.html">Resources</a>
+      <a class="btn btn--solid nav__cta" href="#join">Join Us</a>
+    </nav>
+    <button class="nav__toggle" id="navtoggle" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div class="hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow hero__kicker">FRC Team 5829 — Awty International School</p>
+        <h1>
+          <span class="line"><span>AWTYBOTS</span></span>
+          <span class="line"><span class="grn">ROLL OUT.</span></span>
+        </h1>
+        <p class="hero__lede">We're the FIRST Robotics Competition team at the Awty International School in Houston — 40 students who design, build, and program a new 120-pound robot every year, and bring robotics to our community along the way.</p>
+        <div class="hero__cta">
+          <a class="btn btn--solid" href="robots.html">
+            See our robots
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="https://www.youtube.com/@Awtybots5829" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Watch on YouTube
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__media">
+        <div class="frame">
+          <img src="assets/images/web/robot-field.jpg" alt="AwtyBots robot number 5829 competing on the field">
+          <span class="hero__tag"><b>5829</b> · ON THE FIELD</span>
+        </div>
+      </div>
+    </div>
+
+    <dl class="telemetry">
+      <div><dt>Founded</dt><dd>2015</dd></div>
+      <div><dt>Rookie Season</dt><dd>2016</dd></div>
+      <div><dt>District</dt><dd>FIRST in Texas</dd></div>
+      <div><dt>Home Base</dt><dd>Houston, TX</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ===================== STATS ===================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat reveal" data-d="1"><div class="stat__num"><span data-count="10">0</span></div><div class="stat__label">Seasons // 2016–26</div></div>
+      <div class="stat reveal" data-d="2"><div class="stat__num"><span data-count="40">0</span><span class="u">+</span></div><div class="stat__label">Students // Grades 9–12</div></div>
+      <div class="stat reveal" data-d="3"><div class="stat__num"><span data-count="10">0</span></div><div class="stat__label">Robots Built</div></div>
+      <div class="stat reveal" data-d="4"><div class="stat__num"><span data-count="3">0</span><span class="u">×</span></div><div class="stat__label">FIRST Championship</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="section section--alt" id="about">
+  <div class="wrap">
+    <div class="about">
+      <div class="about__media reveal">
+        <img src="assets/images/web/team.jpg" alt="The full AwtyBots team">
+        <span class="badge">10 Year Anniversary</span>
+      </div>
+      <div class="about__copy reveal" data-d="1">
+        <p class="eyebrow" style="margin-bottom:1rem">From the Rams</p>
+        <h2>A decade of building.</h2>
+        <p>Team 5829 started in 2015, when Awty's VEX team and a group of mentors decided to go bigger. We rookied in FRC the next season and haven't stopped since. <strong>2026 marks our 10th year</strong> — a decade of robots, road trips across Texas, and students learning to build things that hold up under pressure.</p>
+        <p>Today we're around <strong>40 students across grades 9–12</strong>, competing in the FIRST in Texas district. We've reached the FIRST Championship three times, most recently in the 2026 Archimedes Division — and we put just as much into outreach as we do into our robot.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- build-season photo strip -->
+  <div class="wrap photos" style="margin-top:2.4rem">
+    <div class="marquee reveal">
+      <div class="marquee__row">
+        <img src="assets/images/web/makerspace.jpg" alt="Team in the makerspace">
+        <img src="assets/images/web/season-1.jpg" alt="2026 build season">
+        <img src="assets/images/web/season-2.jpg" alt="2026 build season">
+        <img src="assets/images/web/robot-topspin.jpg" alt="Topspin robot, 2022">
+        <img src="assets/images/web/season-3.jpg" alt="2026 build season">
+        <img src="assets/images/web/season-4.jpg" alt="2026 build season">
+        <img src="assets/images/web/feature.jpg" alt="Competition day">
+        <img src="assets/images/web/season-5.jpg" alt="2026 build season">
+        <img src="assets/images/web/season-6.jpg" alt="2026 build season">
+        <!-- duplicate for seamless loop -->
+        <img src="assets/images/web/makerspace.jpg" alt="" aria-hidden="true">
+        <img src="assets/images/web/season-1.jpg" alt="" aria-hidden="true">
+        <img src="assets/images/web/season-2.jpg" alt="" aria-hidden="true">
+        <img src="assets/images/web/robot-topspin.jpg" alt="" aria-hidden="true">
+        <img src="assets/images/web/season-3.jpg" alt="" aria-hidden="true">
+        <img src="assets/images/web/season-4.jpg" alt="" aria-hidden="true">
+        <img src="assets/images/web/feature.jpg" alt="" aria-hidden="true">
+        <img src="assets/images/web/season-5.jpg" alt="" aria-hidden="true">
+        <img src="assets/images/web/season-6.jpg" alt="" aria-hidden="true">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ROBOTS ===================== -->
+<section class="section" id="robots">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="eyebrow" style="margin-bottom:1rem">The Fleet</p>
+        <h2>Every robot has a name.</h2>
+      </div>
+      <p>Ten robots, ten games. Here are the most recent — see the full history back to 2016.</p>
+    </div>
+
+    <div class="robots">
+      <article class="rbot has-img reveal" data-tilt>
+        <img class="rbot__img" src="assets/images/web/feature.jpg" alt="">
+        <span class="rbot__year">2026</span><span class="rbot__game">Rebuilt</span>
+        <h3 class="rbot__name">Goldfire</h3>
+        <p class="rbot__events">McAllen · Space City · State · FIRST Championship</p>
+      </article>
+
+      <article class="rbot reveal" data-d="1" data-tilt>
+        <span class="rbot__year">2025</span><span class="rbot__game">Reefscape</span>
+        <h3 class="rbot__name">Waverider</h3>
+        <p class="rbot__events">Belton · Victoria · State Championships</p>
+      </article>
+
+      <article class="rbot reveal" data-d="2" data-tilt>
+        <span class="rbot__year">2024</span><span class="rbot__game">Crescendo</span>
+        <h3 class="rbot__name">Jazz</h3>
+        <p class="rbot__events">Katy · San Antonio · State Championships</p>
+      </article>
+
+      <article class="rbot reveal" data-tilt>
+        <span class="rbot__year">2023</span><span class="rbot__game">Charged Up</span>
+        <h3 class="rbot__name">Greenlight</h3>
+        <p class="rbot__events">Channelview · San Antonio · State</p>
+      </article>
+
+      <article class="rbot has-img reveal" data-d="1" data-tilt>
+        <img class="rbot__img" src="assets/images/web/robot-topspin.jpg" alt="">
+        <span class="rbot__year">2022</span><span class="rbot__game">Rapid React</span>
+        <h3 class="rbot__name">Topspin</h3>
+        <p class="rbot__events">Channelview · Pasadena · State</p>
+      </article>
+
+      <a class="rbot rbot--more reveal" data-d="2" href="robots.html">
+        <span class="big">2016 →</span>
+        <span class="mono" style="font-size:.74rem;letter-spacing:.1em;color:var(--muted)">SEE ALL 10 ROBOTS</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AUTONOMOUS (signature) ===================== -->
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="auto reveal">
+      <div class="auto__copy">
+        <p class="eyebrow">Signature // Software</p>
+        <h3>Robots that drive themselves.</h3>
+        <p>Our autonomous routines run on WPILib and PathPlanner, with AdvantageKit logging every match — so we can see exactly what the robot did before a driver ever touches the controller.</p>
+      </div>
+      <div class="auto__field" id="autofield">
+        <svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <!-- field hash lines -->
+          <g stroke="var(--line)" stroke-width="1">
+            <line x1="0" y1="60" x2="400" y2="60"/><line x1="0" y1="120" x2="400" y2="120"/><line x1="0" y1="180" x2="400" y2="180"/>
+            <line x1="100" y1="0" x2="100" y2="240"/><line x1="200" y1="0" x2="200" y2="240"/><line x1="300" y1="0" x2="300" y2="240"/>
+          </g>
+          <!-- autonomous route -->
+          <path class="route" id="route" d="M40 200 C 90 200, 110 120, 160 120 S 250 60, 300 70 S 360 140, 360 40"/>
+          <!-- waypoint nodes -->
+          <circle class="node" cx="40" cy="200" r="4"/>
+          <circle class="node" cx="160" cy="120" r="4"/>
+          <circle class="node" cx="300" cy="70" r="4"/>
+          <circle class="node" cx="360" cy="40" r="4"/>
+          <text class="reading" x="46" y="194">START</text>
+          <text class="reading" x="306" y="64">SCORE</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AWARDS / 2026 SEASON ===================== -->
+<section class="section" id="season">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="eyebrow" style="margin-bottom:1rem">2026 Season</p>
+        <h2>What we brought home.</h2>
+      </div>
+      <p>Four events, three judged awards, and a return to the FIRST Championship in our home city.</p>
+    </div>
+    <div class="awards">
+      <div class="award reveal"><h4>Team Sustainability Award</h4><div class="meta">Presented by Dow · FIT McAllen · Rank 3 (9–3)</div></div>
+      <div class="award reveal" data-d="1"><h4>Industrial Design Award</h4><div class="meta">FIT Space City @ Friendswood · 3rd place finish</div></div>
+      <div class="award reveal" data-d="2"><h4>Creativity Award</h4><div class="meta">Sponsored by Rockwell Automation · District Championships</div></div>
+      <div class="award reveal" data-d="3"><h4>FIRST Championship</h4><div class="meta">Archimedes Division · Houston, TX</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COUNTDOWN ===================== -->
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="count reveal">
+      <div>
+        <p class="eyebrow" style="margin-bottom:.4rem">Next Up</p>
+        <h3>Texas Robotics Invitational</h3>
+        <p id="count-sub">June 25–27, 2026 · Strake Jesuit College Prep · Houston, TX</p>
+      </div>
+      <div class="count__clock" id="clock" aria-live="polite">
+        <div><b id="cd-d">--</b><span>Days</span></div>
+        <div><b id="cd-h">--</b><span>Hrs</span></div>
+        <div><b id="cd-m">--</b><span>Min</span></div>
+        <div><b id="cd-s">--</b><span>Sec</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== OUTREACH ===================== -->
+<section class="section" id="outreach">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="eyebrow" style="margin-bottom:1rem">Beyond the Robot</p>
+        <h2>Making robotics reachable.</h2>
+      </div>
+      <p>Outreach isn't a side project for us — it's part of how we compete and who we are.</p>
+    </div>
+    <div class="cards2">
+      <article class="ocard reveal">
+        <span class="tag">Outreach // Access</span>
+        <h4>Project Translate</h4>
+        <p>We translate FRC's technical documentation into other languages, so any student — anywhere — can get into robotics no matter what they speak.</p>
+        <a class="more" href="translate.html">View Project Translate
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+      <article class="ocard reveal" data-d="1">
+        <span class="tag">Outreach // Lab</span>
+        <h4>Belt Organizers</h4>
+        <p>A simple, build-it-yourself system for keeping timing belts sorted in the lab — with instructions any other team can copy and use.</p>
+        <a class="more" href="belts.html">View the build
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GLOBAL ===================== -->
+<section class="section section--alt">
+  <div class="wrap global">
+    <p class="eyebrow" style="justify-content:center;margin-bottom:1rem">One Team, Many Flags</p>
+    <h2>Robotics, in every language.</h2>
+    <p>The Awty International School brings together students from across the world — and our team carries that with us, on the field and in the pit.</p>
+  </div>
+  <div class="marquee reveal" style="margin-top:.5rem" id="flags"></div>
+</section>
+
+<!-- ===================== JOIN ===================== -->
+<section class="section" id="join">
+  <div class="wrap">
+    <div class="join reveal">
+      <p class="eyebrow" style="justify-content:center;margin-bottom:1rem">Get Involved</p>
+      <h2>Build with us.</h2>
+      <p>Whether you're an Awty student ready to join, a sponsor who wants to power the next robot, or a team looking to collaborate — we'd love to hear from you.</p>
+      <div class="join__cta">
+        <a class="btn btn--solid" href="mailto:awtyrobotics@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 6 8 6 8-6"/></svg>
+          Email the team
+        </a>
+        <a class="btn btn--ghost" href="https://www.thebluealliance.com/team/5829" target="_blank" rel="noopener">View on Blue Alliance</a>
+      </div>
+      <div class="socials">
+        <a href="https://www.youtube.com/@Awtybots5829" target="_blank" rel="noopener" aria-label="YouTube"><img src="assets/images/youtube.png" alt=""></a>
+        <a href="https://www.instagram.com/awtybots5829/" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/images/instagram.png" alt=""></a>
+        <a href="https://github.com/awtybots" target="_blank" rel="noopener" aria-label="GitHub"><img src="assets/images/github.png" alt=""></a>
+        <a href="https://www.facebook.com/AwtyBots5829/" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/images/facebook.png" alt=""></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p>
+      AwtyBots · FRC Team 5829 © 2015–2026<br>
+      awtyrobotics@gmail.com · Houston, TX
+    </p>
+    <p>
+      Live data: <a href="https://www.thebluealliance.com/team/5829" target="_blank" rel="noopener">The Blue Alliance</a> ·
+      <a href="https://frc-events.firstinspires.org/team/5829" target="_blank" rel="noopener">FIRST</a><br>
+      Site maintained by the AwtyBots · <a href="#hero">Back to top ↑</a>
+    </p>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>
